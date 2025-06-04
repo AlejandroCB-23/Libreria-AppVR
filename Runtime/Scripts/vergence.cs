@@ -3,22 +3,15 @@ namespace Alex.OcularVergenceLibrary
     using UnityEngine;
     using Wave.Essence.Eye;
 
-    /// <summary>
-    /// Functions related to obtaining and calculating ocular vergence.
-    /// </summary>
+
     public static class VergenceFunctions
     {
-        /// <summary>
-        /// Checks if eye tracking is available.
-        /// </summary>
+
         public static bool IsEyeTrackingAvailable()
         {
             return EyeManager.Instance != null && EyeManager.Instance.IsEyeTrackingAvailable();
         }
 
-        /// <summary>
-        /// Gets the combined eye origin and direction in world coordinates.
-        /// </summary>
         public static bool TryGetCombinedEyeRay(out Ray ray)
         {
             ray = new Ray();
@@ -39,18 +32,12 @@ namespace Alex.OcularVergenceLibrary
             return false;
         }
 
-        /// <summary>
-        /// Calculates the vergence angle given the interpupillary distance and the distance to the object.
-        /// </summary>
         public static float CalculateVergenceAngle(float interpupillaryDistance, float distanceToObject)
         {
             if (distanceToObject == 0f) return 0f;
             return Mathf.Rad2Deg * 2f * Mathf.Atan((interpupillaryDistance / 2f) / distanceToObject);
         }
 
-        /// <summary>
-        /// Calculates the current interpupillary distance using the eye data.
-        /// </summary>
         public static bool TryGetInterpupillaryDistance(out float pd)
         {
             pd = 0f;
@@ -69,9 +56,6 @@ namespace Alex.OcularVergenceLibrary
             return false;
         }
 
-        /// <summary>
-        /// Performs a raycast with the gaze direction and retrieves information about the observed object.
-        /// </summary>
         public static bool TryRaycastHit(out RaycastHit hit, float maxDistance = Mathf.Infinity, int layerMask = Physics.DefaultRaycastLayers)
         {
             hit = new RaycastHit();
