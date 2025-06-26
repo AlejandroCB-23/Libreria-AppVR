@@ -1,0 +1,18 @@
+{
+    "name": "com.alex.ocularvergence",
+    "version": "1.0.0",
+    "displayName": "Ocular Vergence and Eye Tracking Library",
+    "description": "Functions for processing ocular vergence and eye data.",
+    "unity": "2022.3",
+    "keywords": [
+      "vergence",
+      "tdah"
+    ],
+
+
+    "author": {
+      "name": "Alex",
+      "email": "alexcanas08@gmail.com",
+      "url": "https://github.com/AlejandroCB-23"
+    }
+  }
