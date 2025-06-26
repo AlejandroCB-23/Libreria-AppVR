@@ -20,7 +20,7 @@ Puedes importar directamente esta librería en Unity usando la URL del repositor
 
 Si prefieres trabajar con una copia local de la librería para modificarla o probarla directamente, puedes clonar el repositorio y añadir el paquete desde disco en Unity:
 
-1. Clona el repositorio usando Git y descomprímelo en tu equipo:  
+1. Clona el repositorio usando Git:  
    ```bash
    git clone https://github.com/AlejandroCB-23/OcularVergenceLibrary.git
    
